@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Premium Support Portal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i> Nexus
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#" class="btn-primary">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="gradient-text">Welcome to the Future of Support</h1>
+            <p>Experience seamless integration and intelligent walkthroughs with our state-of-the-art interactive portal. Let our AI guide you through every step.</p>
+            <div class="cta-group">
+                <button class="btn-primary glow-effect">Explore Features</button>
+                <button class="btn-secondary">View Documentation</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glass-orb orb-1"></div>
+            <div class="glass-orb orb-2"></div>
+            <div class="glass-card main-hero-card">
+                <i class="fa-solid fa-chart-pie card-icon"></i>
+                <h3>Real-time Analytics</h3>
+                <p>Monitor your performance with crystal clear data visualization.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our <span class="gradient-text">Capabilities</span></h2>
+        <div class="grid-container">
+            <div class="glass-card feature-card">
+                <i class="fa-solid fa-robot feature-icon"></i>
+                <h3>Intelligent AI</h3>
+                <p>Automated responses and guided walkthroughs tailored to your needs.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <i class="fa-solid fa-bolt feature-icon"></i>
+                <h3>Lightning Fast</h3>
+                <p>Optimized for performance with zero latency and instant feedback.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <i class="fa-solid fa-shield-halved feature-icon"></i>
+                <h3>Enterprise Security</h3>
+                <p>Bank-grade encryption ensuring your data is always protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Widget button -->
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open Chat">
+        <i class="fa-solid fa-message"></i>
+    </button>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="chatbot-window hidden">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div>
+                    <h3 class="bot-name">Nexus Assistant</h3>
+                    <span class="bot-status">Online</span>
+                </div>
+            </div>
+            <button id="chat-close" aria-label="Close Chat"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be injected here via JS -->
+        </div>
+
+        <div class="chat-input-area">
+            <div id="typing-indicator" class="typing-indicator hidden">
+                <span></span><span></span><span></span>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+                <button type="submit" id="chat-submit" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
